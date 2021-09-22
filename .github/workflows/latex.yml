@@ -11,19 +11,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install Texlive
+        run: |
+          sudo apt install -y \
+            texlive-full \
+            fonts-noto-core
       - name: Build PDFs
-        uses: xu-cheng/texlive-action/full@v1
-        with:
-          run: |
-            apk add \
-              font-noto \
-              font-bakoma-ttf \
-              ttf-dejavu \
-              ttf-liberation
-            latexmk -xelatex \
-              ./ru-go.tex \
-              ./ru-fullstack.tex \
-              ./ru-ops.tex
+        run: |
+          latexmk -xelatex \
+            ./ru-go.tex \
+            ./ru-fullstack.tex \
+            ./ru-ops.tex
       - name: Create release with PDF assets
         uses: softprops/action-gh-release@v1
         with:
