@@ -31,5 +31,6 @@ jobs:
             ./ru-fullstack.pdf
             ./ru-ops.pdf
           name: latest
+          tag_name: latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
