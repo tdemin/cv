@@ -1,0 +1,43 @@
+\documentclass[11pt,a4]{moderncv}
+\input{formatting}
+
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+\input{contact-ru}
+\date{\today}
+\title{Junior DevOps Engineer}
+\hypersetup{
+ pdfauthor={Timur Demin},
+ pdftitle={Junior DevOps Engineer},
+ pdflang={Russian}
+}
+\begin{document}
+
+\makecvtitle
+
+\section{Образование}
+\cventry{\textbf{2021 --- н.в.}}{УГНТУ}{}{Магистратура}{}{}
+\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+
+\section{Опыт работы}
+\cventry{\textbf{2019 --- н.в.}}{Сопровождающий}{tdem.in}{}{}{
+    Сопровождение различных веб-сервисов (Nextcloud, TTRSS) для личного пользования, настройка
+    автоматической сборки Docker-образов CI-системами для последующего развертывания на персональном
+    сервере. Конфигурация автоматического резервного копирования
+}
+
+\section{Навыки}
+\cvitem{\bfseries Общее}{Linux, Git, сети}
+\cvitem{\bfseries Контейнеры}{Docker, podman}
+\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
+\cvitem{\bfseries Управление конфигурацией}{Ansible}
+\cvitem{\bfseries Оркестрация}{Kubernetes}
+\cvitem{\bfseries Резервное копирование}{restic}
+\cvitem{\bfseries Разработка}{Go, Python, Bash}
+
+\section{Языки}
+\cvitem{\bfseries Русский}{родной}
+\cvitem{\bfseries Английский}{свободное владение}
+
+\end{document}

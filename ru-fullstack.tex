@@ -1,0 +1,48 @@
+\documentclass[11pt,a4]{moderncv}
+\input{formatting}
+
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+\input{contact-ru}
+\date{\today}
+\title{Junior Full-stack Developer}
+\hypersetup{
+ pdfauthor={Timur Demin},
+ pdftitle={Junior Full-stack Developer},
+ pdflang={Russian}
+}
+\begin{document}
+
+\makecvtitle
+
+\section{Образование}
+\cventry{\textbf{2021 --- н.в.}}{УГНТУ}{}{Магистратура}{}{}
+\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+
+\section{Опыт работы}
+\cventry{\textbf{2020 --- н.в.}}{Сопровождающий}{}{}{}{Автор проекта gmnhg, конвертера
+статических Hugo-сайтов в Gemini}
+\cventry{\textbf{сентябрь 2020 --- июнь 2021}}{Разработчик}{}{}{}{Разработал сервер SCADA-системы
+установки СУЛС для ООО "Новые технологии"}
+\cventry{\textbf{июль 2020}}{Стажер}{АО "Нефтеавтоматика"}{}{}{Разработал систему учета MAC-адресов
+микроконтроллеров, выпускаемых предприятием, с API для интеграции прошивающего ПО}
+
+\section{Навыки}
+\cvitem{\bfseries Программирование}{
+    \cvitem{\bfseries Go}{LabStack, Gorilla, sqlx}
+    \cvitem{\bfseries Python}{Flask, SQLAlchemy}
+    \cvitem{\bfseries JavaScript}{TypeScript, React, Redux, MobX}
+    \cvitem{\bfseries Общее}{Swagger, OpenAPI, NATS}
+}
+\cvitem{\bfseries СУБД}{PostgreSQL, SQLite, BoltDB}
+\cvitem{\bfseries Контейнеры}{Docker, docker-compose}
+\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
+\cvitem{\bfseries Общее}{Linux, Git}
+\cvitem{}{Знаком с модульным тестированием}
+
+\section{Языки}
+\cvitem{\bfseries Русский}{родной}
+\cvitem{\bfseries Английский}{свободное владение}
+
+\end{document}

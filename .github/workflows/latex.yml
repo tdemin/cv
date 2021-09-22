@@ -1,0 +1,37 @@
+name: Build CV
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Texlive
+        run: |
+          sudo apt install -y \
+            texlive-full \
+            fonts-noto-core
+      - name: Build PDFs
+        run: |
+          latexmk -xelatex \
+            ./ru-go.tex \
+            ./ru-fullstack.tex \
+            ./ru-ops.tex
+      - name: Create release with PDF assets
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          files: |
+            ./ru-go.pdf
+            ./ru-fullstack.pdf
+            ./ru-ops.pdf
+          name: latest
+          tag_name: latest
+          body: ""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
