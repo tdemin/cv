@@ -12,13 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build PDFs
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/texlive-action/full@v1
         with:
-          root_file: |
-            ./ru-go.tex
-            ./ru-fullstack.tex
-            ./ru-ops.tex
-          latexmk_use_xelatex: true
+          run: |
+            apk add font-noto
+            latexmk -xelatex \
+              ./ru-go.tex \
+              ./ru-fullstack.tex \
+              ./ru-ops.tex
       - name: Create release with PDF assets
         uses: softprops/action-gh-release@v1
         with:
