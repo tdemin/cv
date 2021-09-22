@@ -1,0 +1,77 @@
+\documentclass[11pt,a4]{moderncv}
+
+\usepackage[scale=0.8,top=20mm,bottom=15mm]{geometry}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[unicode]{hyperref}
+
+\setmainfont[Ligatures=TeX,Numbers=OldStyle,Script=Cyrillic]{Noto Serif}
+\setsansfont[Ligatures=TeX,Script=Cyrillic]{Noto Sans}
+\newfontfamily\bio[Ligatures=TeX,Script=Cyrillic]{Noto Serif} 
+\newfontfamily\serif[Ligatures=TeX,Script=Cyrillic]{Noto Serif}
+\newfontfamily\sans[Ligatures=TeX,Script=Cyrillic]{Noto Sans}
+\newfontfamily\cyrillicfont[Ligatures=TeX,Script=Cyrillic]{Noto Serif}
+
+\renewcommand*{\namefont}{\sans\fontsize{34}{36}\mdseries\upshape}
+\renewcommand*{\titlefont}{\serif\LARGE\mdseries\slshape}
+\renewcommand*{\addressfont}{\bio\small\mdseries\slshape}
+\renewcommand*{\quotefont}{\serif\large\slshape}
+\renewcommand*{\sectionfont}{\sans\Large\mdseries\upshape}
+\renewcommand*{\subsectionfont}{\sans\large\mdseries\upshape}
+\renewcommand*{\hintfont}{}
+
+\moderncvstyle{classic}
+\moderncvcolor{grey}
+
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+\name{Демин Тимур Андреевич}{}
+\phone{+7 (927) 311-25-68}
+\address{}{Уфа}{}
+\email{me@tdem.in}
+\homepage{tdem.in}
+\social[github]{tdemin}
+\social[linkedin]{tdemin}
+\photo[64pt][0pt]{picture}
+\date{\today}
+\title{Junior Full-stack Developer}
+\hypersetup{
+ pdfauthor={Timur Demin},
+ pdftitle={Junior Full-stack Developer},
+ pdflang={Russian}
+}
+\begin{document}
+
+\makecvtitle
+
+\section{Образование}
+\cventry{\textbf{2021 --- н.в.}}{УГНТУ}{}{Магистратура}{}{}
+\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+
+\section{Опыт работы}
+\cventry{\textbf{2020 --- н.в.}}{Сопровождающий}{}{}{}{Автор проекта gmnhg, конвертера
+статических Hugo-сайтов в Gemini}
+\cventry{\textbf{сентябрь 2020 --- июнь 2021}}{Разработчик}{}{}{}{Разработал сервер SCADA-системы
+установки СУЛС для ООО "Новые технологии"}
+\cventry{\textbf{июль 2020}}{Стажер}{АО "Нефтеавтоматика"}{}{}{Разработал систему учета MAC-адресов
+микроконтроллеров, выпускаемых предприятием, с API для интеграции прошивающего ПО}
+
+\section{Навыки}
+\cvitem{\bfseries Программирование}{
+    \cvitem{\bfseries Go}{LabStack, Gorilla, sqlx}
+    \cvitem{\bfseries Python}{Flask, SQLAlchemy}
+    \cvitem{\bfseries JavaScript}{TypeScript, React, Redux, MobX}
+    \cvitem{\bfseries Общее}{Swagger, OpenAPI, NATS}
+}
+\cvitem{\bfseries СУБД}{PostgreSQL, SQLite, BoltDB}
+\cvitem{\bfseries Контейнеры}{Docker, docker-compose}
+\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
+\cvitem{\bfseries Общее}{Linux, Git}
+\cvitem{}{Знаком с модульным тестированием}
+
+\section{Языки}
+\cvitem{\bfseries Русский}{родной}
+\cvitem{\bfseries Английский}{свободное владение}
+
+\end{document}

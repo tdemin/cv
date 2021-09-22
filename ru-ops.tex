@@ -1,0 +1,72 @@
+\documentclass[11pt,a4]{moderncv}
+
+\usepackage[scale=0.8,top=20mm,bottom=15mm]{geometry}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[unicode]{hyperref}
+
+\setmainfont[Ligatures=TeX,Numbers=OldStyle,Script=Cyrillic]{Noto Serif}
+\setsansfont[Ligatures=TeX,Script=Cyrillic]{Noto Sans}
+\newfontfamily\bio[Ligatures=TeX,Script=Cyrillic]{Noto Serif} 
+\newfontfamily\serif[Ligatures=TeX,Script=Cyrillic]{Noto Serif}
+\newfontfamily\sans[Ligatures=TeX,Script=Cyrillic]{Noto Sans}
+\newfontfamily\cyrillicfont[Ligatures=TeX,Script=Cyrillic]{Noto Serif}
+
+\renewcommand*{\namefont}{\sans\fontsize{34}{36}\mdseries\upshape}
+\renewcommand*{\titlefont}{\serif\LARGE\mdseries\slshape}
+\renewcommand*{\addressfont}{\bio\small\mdseries\slshape}
+\renewcommand*{\quotefont}{\serif\large\slshape}
+\renewcommand*{\sectionfont}{\sans\Large\mdseries\upshape}
+\renewcommand*{\subsectionfont}{\sans\large\mdseries\upshape}
+\renewcommand*{\hintfont}{}
+
+\moderncvstyle{classic}
+\moderncvcolor{grey}
+
+\setmainlanguage{russian}
+\setotherlanguage{english}
+
+\name{Демин Тимур Андреевич}{}
+\phone{+7 (927) 311-25-68}
+\address{}{Уфа}{}
+\email{me@tdem.in}
+\homepage{tdem.in}
+\social[github]{tdemin}
+\social[linkedin]{tdemin}
+\photo[64pt][0pt]{picture}
+\date{\today}
+\title{Junior DevOps Engineer}
+\hypersetup{
+ pdfauthor={Timur Demin},
+ pdftitle={Junior DevOps Engineer},
+ pdflang={Russian}
+}
+\begin{document}
+
+\makecvtitle
+
+\section{Образование}
+\cventry{\textbf{2021 --- н.в.}}{УГНТУ}{}{Магистратура}{}{}
+\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+
+\section{Опыт работы}
+\cventry{\textbf{2019 --- н.в.}}{Сопровождающий}{tdem.in}{}{}{
+    Сопровождение различных веб-сервисов (Nextcloud, TTRSS) для личного пользования, настройка
+    автоматической сборки Docker-образов CI-системами для последующего развертывания на персональном
+    сервере. Конфигурация автоматического резервного копирования
+}
+
+\section{Навыки}
+\cvitem{\bfseries Общее}{Linux, Git, сети}
+\cvitem{\bfseries Контейнеры}{Docker, podman}
+\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
+\cvitem{\bfseries Управление конфигурацией}{Ansible}
+\cvitem{\bfseries Оркестрация}{Kubernetes}
+\cvitem{\bfseries Резервное копирование}{restic}
+\cvitem{\bfseries Разработка}{Go, Python, Bash}
+
+\section{Языки}
+\cvitem{\bfseries Русский}{родной}
+\cvitem{\bfseries Английский}{свободное владение}
+
+\end{document}

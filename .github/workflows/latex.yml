@@ -1,0 +1,35 @@
+name: Build CV
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+      - name: Build PDFs
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            ./ru-go.tex
+            ./ru-fullstack.tex
+            ./ru-ops.tex
+      - name: Create release with PDF assets
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          files: |
+            ./ru-go.pdf
+            ./ru-fullstack.pdf
+            ./ru-ops.pdf
+          name: latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
