@@ -18,6 +18,7 @@ jobs:
             ./ru-go.tex
             ./ru-fullstack.tex
             ./ru-ops.tex
+          latexmk_use_xelatex: true
       - name: Create release with PDF assets
         uses: softprops/action-gh-release@v1
         with:
