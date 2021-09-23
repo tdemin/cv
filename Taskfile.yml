@@ -5,10 +5,10 @@ tasks:
     cmds:
     - |
       latexmk {{.FLAGS}} \
-        ru-go.tex \
         ru-ops.tex \
         ru-fullstack.tex
     sources:
+    - ./picture.jpg
     - ./**/*.tex
     generates:
     - ./**/*.pdf
