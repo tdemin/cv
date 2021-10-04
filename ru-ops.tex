@@ -1,5 +1,5 @@
 \documentclass[11pt,a4]{moderncv}
-\input{formatting}
+\input{formatting-ru}
 
 \setmainlanguage{russian}
 \setotherlanguage{english}
@@ -16,9 +16,7 @@
 
 \makecvtitle
 
-\section{Образование}
-\cventry{\textbf{2021 --- н.в.}}{УГНТУ}{}{Магистратура}{}{}
-\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+\input{education-ru}
 
 \section{Опыт работы}
 \cventry{\textbf{2019 --- н.в.}}{Сопровождающий}{tdem.in}{}{}{
@@ -32,12 +30,10 @@
 \cvitem{\bfseries Контейнеры}{Docker, podman}
 \cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
 \cvitem{\bfseries Управление конфигурацией}{Ansible}
-\cvitem{\bfseries Оркестрация}{Kubernetes}
+\cvitem{\bfseries Оркестрация}{docker-compose}
 \cvitem{\bfseries Резервное копирование}{restic}
 \cvitem{\bfseries Разработка}{Go, Python, Bash}
 
-\section{Языки}
-\cvitem{\bfseries Русский}{родной}
-\cvitem{\bfseries Английский}{свободное владение}
+\input{misc-ru}
 
 \end{document}

@@ -1,0 +1,38 @@
+\documentclass[11pt,a4]{moderncv}
+\input{formatting-en}
+
+\setmainlanguage{english}
+
+\input{contact-en}
+\date{\today}
+\title{Junior DevOps Engineer}
+\hypersetup{
+ pdfauthor={Timur Demin},
+ pdftitle={Junior DevOps Engineer},
+ pdflang={English}
+}
+\begin{document}
+
+\makecvtitle
+
+\input{education-en}
+
+\section{Experience}
+\cventry{\textbf{2019 --- current}}{Maintainer}{tdem.in}{}{}{
+    Maintaining various web services (Nextcloud, TTRSS, Gitea, Drone CI) for personal use.
+    Set up automatic builds of Docker images with the CI system for deployment to a personal
+    server. Configured automatic backups.
+}
+
+\section{Skills}
+\cvitem{\bfseries General}{Linux, Git, networking, storage}
+\cvitem{\bfseries Containers}{Docker, podman}
+\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
+\cvitem{\bfseries Automation}{Ansible}
+\cvitem{\bfseries Orchestration}{docker-compose}
+\cvitem{\bfseries Backups}{restic}
+\cvitem{\bfseries Development}{Go, Python, Bash}
+
+\input{misc-en}
+
+\end{document}

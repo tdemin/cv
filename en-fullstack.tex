@@ -1,0 +1,44 @@
+\documentclass[11pt,a4]{moderncv}
+\input{formatting-en}
+
+\setmainlanguage{english}
+
+\input{contact-en}
+\date{\today}
+\title{Junior Full-stack Developer}
+\hypersetup{
+ pdfauthor={Timur Demin},
+ pdftitle={Junior Full-stack Developer},
+ pdflang={English}
+}
+\begin{document}
+
+\makecvtitle
+
+\input{education-en}
+
+\section{Job experience}
+\cventry{\textbf{2020 --- current}}{Maintainer}{}{}{}{Maintaining gmnhg, a custom Hugo-to-Gemini
+site conversion software and a library to process Markdown to Gemtext}
+% TODO: append major project list
+\cventry{\textbf{Sep 2020 --- Jun 2021}}{Software Engineer}{}{}{}{Developed a custom SCADA software
+of the SULS installation for "Novye Tehnologii" LLC}
+\cventry{\textbf{Jul 2020}}{Intern}{AO "Nefteavtomatika"}{}{}{Made a web-based custom automatic MAC
+address accounting system for controllers released by the company. Documented and designed an API
+to integrate with the company's flashing software}
+
+\section{Skills}
+\cvitem{\bfseries Programming}{
+    \cvitem{\bfseries Go}{LabStack, Gorilla, sqlx}
+    \cvitem{\bfseries Python}{Flask, SQLAlchemy}
+    \cvitem{\bfseries JavaScript}{TypeScript, React, Redux, MobX}
+    \cvitem{\bfseries Misc}{NATS}
+}
+\cvitem{\bfseries Databases}{PostgreSQL, SQLite, BoltDB}
+\cvitem{\bfseries Containers}{Docker, docker-compose}
+\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
+\cvitem{\bfseries Misc}{Linux, Git, familiar with unit testing}
+
+\input{misc-en}
+
+\end{document}

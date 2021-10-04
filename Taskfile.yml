@@ -6,7 +6,9 @@ tasks:
     - |
       latexmk {{.FLAGS}} \
         ru-ops.tex \
-        ru-fullstack.tex
+        ru-fullstack.tex \
+        en-ops.tex \
+        en-fullstack.tex
     sources:
     - ./picture.jpg
     - ./**/*.tex

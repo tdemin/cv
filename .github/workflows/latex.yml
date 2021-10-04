@@ -19,6 +19,8 @@ jobs:
       - name: Build PDFs
         run: |
           latexmk -xelatex \
+            ./en-fullstack.tex \
+            ./en-ops.tex \
             ./ru-fullstack.tex \
             ./ru-ops.tex
       - name: Create release with PDF assets
@@ -26,6 +28,8 @@ jobs:
         with:
           prerelease: true
           files: |
+            ./en-fullstack.pdf
+            ./en-ops.pdf
             ./ru-fullstack.pdf
             ./ru-ops.pdf
           name: latest

@@ -1,5 +1,5 @@
 \documentclass[11pt,a4]{moderncv}
-\input{formatting}
+\input{formatting-ru}
 
 \setmainlanguage{russian}
 \setotherlanguage{english}
@@ -16,24 +16,23 @@
 
 \makecvtitle
 
-\section{Образование}
-\cventry{\textbf{2021 --- н.в.}}{УГНТУ}{}{Магистратура}{}{}
-\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+\input{education-ru}
 
 \section{Опыт работы}
 \cventry{\textbf{2020 --- н.в.}}{Сопровождающий}{}{}{}{Автор проекта gmnhg, конвертера
 статических Hugo-сайтов в Gemini}
 \cventry{\textbf{сентябрь 2020 --- июнь 2021}}{Разработчик}{}{}{}{Разработал сервер SCADA-системы
-установки СУЛС для ООО "Новые технологии"}
+установки СУЛС для ООО "Новые технологии". Стек: Go, Gorilla, TypeScript, React, MobX}
 \cventry{\textbf{июль 2020}}{Стажер}{АО "Нефтеавтоматика"}{}{}{Разработал систему учета MAC-адресов
-микроконтроллеров, выпускаемых предприятием, с API для интеграции прошивающего ПО}
+микроконтроллеров, выпускаемых предприятием, с API для интеграции прошивающего ПО. Стек: Go,
+Gorilla, Pongo2, PostgreSQL}
 
 \section{Навыки}
 \cvitem{\bfseries Программирование}{
     \cvitem{\bfseries Go}{LabStack, Gorilla, sqlx}
     \cvitem{\bfseries Python}{Flask, SQLAlchemy}
     \cvitem{\bfseries JavaScript}{TypeScript, React, Redux, MobX}
-    \cvitem{\bfseries Общее}{Swagger, OpenAPI, NATS}
+    \cvitem{\bfseries Общее}{NATS}
 }
 \cvitem{\bfseries СУБД}{PostgreSQL, SQLite, BoltDB}
 \cvitem{\bfseries Контейнеры}{Docker, docker-compose}
@@ -41,8 +40,6 @@
 \cvitem{\bfseries Общее}{Linux, Git}
 \cvitem{}{Знаком с модульным тестированием.}
 
-\section{Языки}
-\cvitem{\bfseries Русский}{родной}
-\cvitem{\bfseries Английский}{свободное владение}
+\input{misc-ru}
 
 \end{document}
