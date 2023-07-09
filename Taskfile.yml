@@ -3,14 +3,22 @@ version: "3"
 tasks:
   build:
     cmds:
-    - |
-      latexmk {{.FLAGS}} \
-        ru-ops.tex \
-        en-ops.tex \
+    - >-
+      latexmk -xelatex
+      ru-ops.tex
+      en-ops.tex
     sources:
     - ./picture.jpg
     - ./**/*.tex
     generates:
     - ./**/*.pdf
-    vars:
-      FLAGS: -xelatex
+  clean:
+    cmds:
+    - >-
+      rm
+      *.xdv
+      *.fls
+      *.aux
+      *.fdb_latexmk
+      *.log
+      *.out
