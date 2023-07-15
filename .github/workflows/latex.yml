@@ -3,7 +3,7 @@ name: Build CV
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   latex:
@@ -19,15 +19,21 @@ jobs:
             latexmk -xelatex \
               ./en-ops.tex \
               ./ru-ops.tex
+            mv \
+              en-ops.pdf \
+              EN_Timur_Demin_DevOps_Engineer.pdf
+            mv \
+              ru-ops.pdf \
+              RU_Timur_Demin_DevOps_Engineer.pdf
       - name: Create release with PDF assets
         uses: softprops/action-gh-release@v1
         with:
-          prerelease: true
           files: |
-            ./en-ops.pdf
-            ./ru-ops.pdf
-          name: latest
+            ./EN_Timur_Demin_DevOps_Engineer.pdf
+            ./RU_Timur_Demin_DevOps_Engineer.pdf
+          name: CV (PDF)
           tag_name: latest
-          body: ""
+          body: |
+            See "Assets" below for PDF files.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
