@@ -15,7 +15,7 @@ jobs:
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
-            apk add font-noto
+            apk add font-dejavu
             latexmk -xelatex \
               ./en-ops.tex \
               ./ru-ops.tex
