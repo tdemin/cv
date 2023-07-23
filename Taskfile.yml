@@ -4,7 +4,7 @@ tasks:
   build:
     cmds:
     - >-
-      latexmk -xelatex
+      latexmk -xelatex -halt-on-error
       ru-ops.tex
       en-ops.tex
     sources:
