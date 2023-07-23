@@ -18,23 +18,67 @@
 \input{education-en}
 
 \section{Experience}
-\cventry{\textbf{December 2021 --- current}}{DevOps Engineer}{omitted for ethics reasons}{}{}{
-    omitted for ethics reasons
+\cventry{\textbf{Dec 2021 --- Jun 2023}}{DevOps / Platform Engineer}{RN-BashNIPIneft LLC}{}{}{
+    \begin{itemize}
+    \item
+        Maintained three different internally developed systems, their deployment to test
+        and production contours.
+    \item
+        Worked on an internal development platform (IDP) initially based on GitLab CE,
+        superseded with Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube. Maintained
+        IDP-specific innerworkings: shared Jenkins libraries, Jenkins agent images, local base
+        Docker image library with repository / certificates presets, etc. Maintained an older
+        TeamCity instance.
+    \item
+        Developed IDP-specific release engineering and automation software:
+        \begin{itemize}
+            \item
+                Gitea release uploader and changelog generator, written in Go
+            \item
+                Gitea group policy editor (allowing default repository settings, automatic
+                branch creation, enabling branch protection, etc), written in Go
+            \item
+                Gitea repository batch processing utility (repository settings, user /
+                repository migration between instances, etc), written in Python
+        \end{itemize}
+    \item
+        Managed both IDP-internal (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
+        / Grafana) and project-specific (Logstash, Elasticsearch / Prometheus / Grafana)
+        monitoring and logging services. Maintained team-specific monitoring for Oracle XE
+        and PostgreSQL.
+    \item
+        Administered corporate YouTrack instance, developed JavaScript workflows for teams using
+        YouTrack for tech support (e.g. automatic company detection for incoming tickets,
+        assigning teams by task state, etc).
+    \item
+        Combined DevOps and backend developer roles on one of the projects: worked on
+        services providing cron webhooks and container image building capabilities in Go /
+        Labstack Echo / PostgreSQL / buildah.
+    \item
+        Provided developers with tech/tooling support where necessary.
+    \item
+        Upkept infrastructure documentation as Ansible / helmfile code where possible.
+        Maintained a local Ansible role and module library for various administration
+        tasks.
+    \end{itemize}
 }
 \cventry{\textbf{2019 --- current}}{Maintainer}{tdem.in}{}{}{
-    Maintaining various web services (Nextcloud, TTRSS, Gitea, Drone CI) for personal use.
-    Set up automatic builds of Docker images with the CI system for deployment to a personal
-    server. Configured automatic backups.
+    Maintaining various web services (Nextcloud, TTRSS, Gitea, Drone) for personal use.
+    Set up automatic builds of Docker images with Gitea / Drone (later changed to GitHub
+    Actions) for deployment to a personal server. Configured automatic backups. Made a
+    GitHub Action to retrieve latest Git tags of software for automatic builds.
 }
 
 \section{Skills}
-\cvitem{\bfseries General}{Linux, Git, networking, storage}
-\cvitem{\bfseries Containers}{Docker, podman}
-\cvitem{\bfseries CI/CD}{GitHub Actions, Drone CI}
-\cvitem{\bfseries Automation}{Ansible}
-\cvitem{\bfseries Orchestration}{docker-compose}
+\cvitem{\bfseries General}{Linux (Ubuntu, Debian, Red Hat), Git, networking, storage}
+\cvitem{\bfseries Containers}{Docker, podman / buildah}
+\cvitem{\bfseries CI/CD}{Jenkins, GitHub Actions, Drone CI (1.x), GitLab CI, TeamCity}
+\cvitem{\bfseries Automation, IaaC}{Ansible, helmfile}
+\cvitem{\bfseries Logging}{fluent-bit, Logstash, Loki}
+\cvitem{\bfseries Monitoring, Alerting}{Prometheus, Thanos, Grafana, Alertmanager}
+\cvitem{\bfseries Orchestration}{Kubernetes (bare metal, k3s), docker-compose}
 \cvitem{\bfseries Backups}{restic}
-\cvitem{\bfseries Development}{Go, Python, Bash}
+\cvitem{\bfseries Development}{Go, Python, bash, Groovy}
 
 \input{misc-en}
 
