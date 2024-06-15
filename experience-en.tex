@@ -1,0 +1,59 @@
+\section{Experience}
+\cventry{\textbf{Sep 2023 --- current}}{DevOps Engineer}{omitted for ethics reasons}{}{}{}
+\cventry{\textbf{Dec 2021 --- Jun 2023}}{DevOps / Platform Engineer}{RN-BashNIPIneft LLC}{}{}{
+    \begin{itemize}
+    \item
+        Upkept infrastructure in Docker / Kubernetes, kept documentation as Ansible / helmfile
+        code where possible. Maintained a local Ansible role and module library for various
+        administration tasks.
+    \item
+        Maintained internally developed systems, their deployment to test and production
+        contours. Built CI/CD pipelines for them in Jenkins.
+    \item
+        Worked on an internal development platform (IDP) initially based on GitLab CE,
+        superseded with Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube. Maintained
+        IDP-specific innerworkings: shared Jenkins libraries, Jenkins agent images, local base
+        Docker image library with repository / certificates presets, etc. Maintained an older
+        TeamCity instance.
+    \item
+        Developed IDP-specific release engineering and automation software:
+        \begin{itemize}
+            \item
+                Gitea release uploader and changelog generator, written in Go
+            \item
+                Gitea group policy editor (allowing default repository settings, automatic
+                branch creation, enabling branch protection, etc), written in Go
+            \item
+                Gitea repository batch processing utility (repository settings, user /
+                repository migration between instances, etc), written in Python
+        \end{itemize}
+    \item
+        Managed both IDP-internal (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
+        / Grafana) and project-specific (Logstash, Elasticsearch / Prometheus / Grafana)
+        monitoring and logging services. Maintained team-specific monitoring for Oracle XE
+        and PostgreSQL.
+    \item
+        Administered corporate YouTrack instance, developed JavaScript workflows for teams using
+        YouTrack for tech support (e.g. automatic company detection for incoming tickets,
+        assigning teams by task state, etc).
+    \item
+        Combined DevOps and backend developer roles on one of the projects: worked on
+        services providing cron webhooks and container image building capabilities in Go /
+        Labstack Echo / PostgreSQL / buildah.
+    \item
+        Provided developers with tech/tooling support where necessary.
+    \end{itemize}
+}
+\cventry{\textbf{Jun 2020 --- Jul 2020}}{Intern}{JSC Nefteavtomatika}{}{}{
+    \begin{itemize}
+    \item
+        Worked on internal microcontroller accounting software in Go / Gorilla /
+        Pongo2 / PostgreSQL. Ensured its compatibility with Debian 9.
+    \end{itemize}
+}
+\cventry{\textbf{2019 --- current}}{Maintainer}{tdem.in}{}{}{
+    Maintaining various web services (Nextcloud, TTRSS, Gitea, Drone) for personal use.
+    Set up automatic builds of Docker images with Gitea / Drone (later changed to GitHub
+    Actions) for deployment to a personal server. Configured automatic backups. Made a
+    GitHub Action to retrieve latest Git tags of software for automatic builds.
+}

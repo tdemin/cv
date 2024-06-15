@@ -18,82 +18,11 @@
 
 \input{education-ru}
 
-\section{Опыт работы}
-\cventry{\textbf{сен. 2023 --- по н.в.}}{DevOps Engineer}{опущено по соображениям деловой этики}{}{}{}
-\cventry{\textbf{дек. 2021 --- июнь 2023}}{DevOps / Platform Engineer}{ООО "РН-БашНИПИнефть"}{}{}{
-    \begin{itemize}
-    \item
-        Сопровождение инфраструктуры в Docker и Kubernetes, документации к ней как Ansible /
-        helmfile-кода там, где это возможно. Ведение локальной библиотеки Ansible-ролей и модулей
-        для административных задач.
-    \item
-        Сопровождение внутренних разрабатываемых систем, их развертывание в тестовые и
-        продуктивные контуры. Поддержка пайплайнов CI/CD для них на Jenkins.
-    \item
-        Поддержка внутренней площадки разработки (IDP), изначально основанной на GitLab CE,
-        позднее переведенной на Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube.
-        Поддержка специфичных для IDP компонент: общих библиотек для Jenkins, образов агентов
-        Jenkins, библиотеки локальных Docker-образов с преднастроенными внутренними
-        репозиториями и удостоверяющими центрами, и т.д. Сопровождение инстанса TeamCity для
-        специфичных сборок.
-    \item
-        Разработка IDP-специфичных утилит сопровождения и автоматизации релизов:
-        \begin{itemize}
-            \item
-                Генератор релизов и списков изменений к ним для Gitea (на Go)
-            \item
-                Движок групповых политик для Gitea (реализующий настройки по умолчанию
-                для новых репозиториев внутри организации, автоматическое создание нужных
-                веток, включение защиты веток, и т.д.) (на Go)
-            \item
-                Утилита массового выполнения операций с репозиториями Gitea (автонастройка
-                репозиториев, миграция пользователей и репозиториев с других сервисов, и т.д.)
-                (на Python)
-        \end{itemize}
-    \item
-        Поддержка внутренних для IDP (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
-        / Grafana) и специфичных для проектов (Logstash / Elasticsearch / Prometheus / Grafana)
-        сервисов мониторинга и логгирования. Сопровождение специфичного для команд мониторинга
-        (Oracle XE).
-    \item
-        Сопровождение корпоративного инстанса YouTrack. Разработка рабочих процессов на
-        JavaScript для команд, использующих YouTrack для техподдержки (автоопределение организации
-        для входящих тикетов из почты, автоназначение команд на задачи, и т.п.)
-    \item
-        Совмещение ролей DevOps и backend-разработчика на одном из проектов: разработка
-        RESTful-сервисов для cron-вебхуков и сборки образов контейнеров на Go / Labstack Echo
-        / PostgreSQL / buildah.
-    \item
-        Техническая поддержка разработчиков в случае необходимости.
-    \end{itemize}
-}
-\cventry{\textbf{июнь 2020 --- июль 2020}}{Практикант}{АО "Нефтеавтоматика"}{}{}{
-    \begin{itemize}
-    \item
-        Разработка внутреннего ПО учета микроконтроллеров на Go / Gorilla / Pongo2 /
-        PostgreSQL. Тестирование и отладка на Debian 9.
-    \end{itemize}
-}
-\cventry{\textbf{2019 --- н.в.}}{Сопровождающий}{tdem.in}{}{}{
-    Сопровождение различных веб-сервисов (Nextcloud, TTRSS, Gitea, Drone) для
-    личного пользования. Настройка автоматической сборки Docker-образов с Gitea / Drone CI
-    (позднее замена на GitHub Actions) для развертывания на персональном сервере.
-    Конфигурация автоматического резервного копирования. Разработка модуля GitHub Actions
-    для автоматизированного забора Git-тегов разнородного ПО для автоматических сборок.
-}
+\input{experience-ru}
 
-\section{Навыки}
-\cvitem{\bfseries Общее}{Linux (Ubuntu, Debian, Red Hat), Git, сети}
-\cvitem{\bfseries Контейнеры}{Docker, rootless podman / buildah}
-\cvitem{\bfseries CI}{GitLab CI, Jenkins, GitHub Actions, Drone CI (1.x), TeamCity}
-\cvitem{\bfseries CD}{Argo CD, Flux (2.x)}
-\cvitem{\bfseries IaC}{Ansible, helmfile, kustomize}
-\cvitem{\bfseries Логгирование}{fluent-bit, Logstash, Loki}
-\cvitem{\bfseries Мониторинг}{Prometheus, Thanos, Grafana, Alertmanager}
-\cvitem{\bfseries Оркестрация}{Kubernetes (bare metal, k3s, RKE2), docker-compose}
-\cvitem{\bfseries СУБД}{PostgreSQL, Redis, Elasticsearch}
-\cvitem{\bfseries Бэкапы}{restic}
-\cvitem{\bfseries Разработка}{Go (Echo, Gorilla), Python, bash, Groovy, JavaScript / TypeScript}
+\input{skills-ru}
+
+\input{languages-ru}
 
 \input{misc-ru}
 
