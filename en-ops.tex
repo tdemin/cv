@@ -1,9 +1,35 @@
 \documentclass[10pt,a4]{moderncv}
-\input{formatting-en}
+\usepackage[scale=0.9,top=10mm,bottom=5mm,left=10mm,right=10mm]{geometry}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[unicode]{hyperref}
+\recomputelengths
+\setmainfont[Ligatures=TeX,Numbers=OldStyle]{DejaVu Serif}
+\setsansfont[Ligatures=TeX]{DejaVu Sans}
+\newfontfamily\bio[Ligatures=TeX]{DejaVu Serif}
+\newfontfamily\serif[Ligatures=TeX]{DejaVu Serif}
+\newfontfamily\sans[Ligatures=TeX]{DejaVu Sans}
+\renewcommand*{\namefont}{\sans\fontsize{24}{28}\mdseries\upshape}
+\renewcommand*{\titlefont}{\serif\LARGE\mdseries\slshape}
+\renewcommand*{\addressfont}{\bio\small\mdseries\slshape}
+\renewcommand*{\quotefont}{\serif\large\slshape}
+\renewcommand*{\sectionfont}{\sans\Large\mdseries\upshape}
+\renewcommand*{\subsectionfont}{\sans\large\mdseries\upshape}
+\renewcommand*{\hintfont}{}
+\moderncvstyle{classic}
+\moderncvcolor{grey}
 
 \setmainlanguage{english}
 
-\input{contact-en}
+\name{Timur Demin}{}
+\phone{+7 (771) 317-26-67}
+\address{}{Astana}{Kazakhstan}
+\email{me@tdem.in}
+\homepage{tdem.in}
+\social[github]{tdemin}
+\social[linkedin]{tdemin}
+\photo[96pt][0.4pt]{picture}
+
 \date{\today}
 \title{DevOps Engineer}
 \hypersetup{
@@ -16,10 +42,87 @@
 \makecvtitle
 \vspace*{-5mm}
 
-\input{skills-en}
-\input{education-en}
-\input{languages-en}
-\input{experience-en}
-\input{misc-en}
+\section{Skills}
+\cvitem{\bfseries General}{Linux (Ubuntu, Debian, Red Hat), Git, networking}
+\cvitem{\bfseries Orchestration}{Kubernetes (bare metal, k3s, RKE2, vanilla Kubernetes), docker-compose}
+\cvitem{\bfseries Containers}{Docker, Buildkit, rootless podman / buildah}
+\cvitem{\bfseries CI}{GitLab CI, Jenkins, GitHub Actions, Drone CI (1.x), TeamCity}
+\cvitem{\bfseries CD}{Argo CD, Flux CD (2.x)}
+\cvitem{\bfseries IaC}{Ansible, kustomize, Terraform, helmfile}
+\cvitem{\bfseries Logging}{Loki, fluent-bit, Logstash}
+\cvitem{\bfseries Monitoring}{Prometheus, Grafana, Alertmanager}
+\cvitem{\bfseries Databases}{PostgreSQL / Patroni, Redis, Elasticsearch}
+\cvitem{\bfseries Development}{Go (Echo, Gorilla), Python, bash, JavaScript}
+\cvitem{\bfseries Misc}{restic, MinIO, Sonatype Nexus, Harbor, Keycloak}
+
+\section{Education}
+\cventry{\textbf{2017 --- 2021}}{Ufa State Petroleum Technological University}{}{BSc Major in
+Computer Science}{}{}
+
+\section{Languages}
+\cvitem{\bfseries English}{full professional proficiency}
+\cvitem{\bfseries Russian}{native}
+
+\section{Experience}
+\cventry{\textbf{Sep 2023 --- current}}{DevOps Engineer}{E-Finance Center JSC}{}{}{
+    Key technology: Kubernetes, Go, Argo CD, GitLab CI, Flux CD
+}
+\cventry{\textbf{Dec 2021 --- Jun 2023}}{DevOps / Platform Engineer}{RN-BashNIPIneft LLC}{}{}{
+    \begin{itemize}
+    \item
+        Upkept infrastructure in Docker / Kubernetes, kept documentation as Ansible / helmfile
+        code where possible. Maintained a local Ansible role and module library for various
+        administration tasks.
+    \item
+        Maintained internally developed systems, their deployment to test and production
+        contours. Built CI/CD pipelines for them in Jenkins.
+    \item
+        Worked on an internal development platform (IDP) initially based on GitLab CE,
+        superseded with Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube. Maintained
+        IDP-specific innerworkings: shared Jenkins libraries, Jenkins agent images, local base
+        Docker image library with repository / certificates presets, etc. Maintained an older
+        TeamCity instance.
+    \item
+        Developed IDP-specific release engineering and automation software:
+        \begin{itemize}
+            \item
+                Gitea release uploader and changelog generator, written in Go
+            \item
+                Gitea group policy editor (allowing default repository settings, automatic
+                branch creation, enabling branch protection, etc), written in Go
+            \item
+                Gitea repository batch processing utility (repository settings, user /
+                repository migration between instances, etc), written in Python
+        \end{itemize}
+    \item
+        Managed both IDP-internal (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
+        / Grafana) and project-specific (Logstash, Elasticsearch / Prometheus / Grafana)
+        monitoring and logging services. Maintained team-specific monitoring for Oracle XE
+        and PostgreSQL.
+    \item
+        Administered corporate YouTrack instance, developed JavaScript workflows for teams using
+        YouTrack for tech support (e.g. automatic company detection for incoming tickets,
+        assigning teams by task state, etc).
+    \item
+        Combined DevOps and backend developer roles on one of the projects: worked on
+        services providing cron webhooks and container image building capabilities in Go /
+        Labstack Echo / PostgreSQL / buildah.
+    \item
+        Provided developers with tech/tooling support where necessary.
+    \end{itemize}
+}
+\cventry{\textbf{Jun 2020 --- Jul 2020}}{Intern}{JSC Nefteavtomatika}{}{}{
+    \begin{itemize}
+    \item
+        Worked on internal microcontroller accounting software in Go / Gorilla /
+        Pongo2 / PostgreSQL. Ensured its compatibility with Debian 9.
+    \end{itemize}
+}
+
+\section{Misc}
+Free Software movement supporter. Former news writer and proofreader for a local IT community
+Linux.org.ru. Maintainer of Arch Linux User Repository and nixpkgs packages. Active on GitHub,
+interested in backend and web development in general. Special interest in practical information
+security, network, filesystem, and OS-level application hardening and isolation.
 
 \end{document}

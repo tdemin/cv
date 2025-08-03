@@ -1,10 +1,37 @@
 \documentclass[10pt,a4]{moderncv}
-\input{formatting-ru}
+\usepackage[scale=0.9,top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[unicode]{hyperref}
+\recomputelengths
+\setmainfont[Ligatures=TeX,Numbers=OldStyle,Script=Cyrillic]{DejaVu Serif}
+\setsansfont[Ligatures=TeX,Script=Cyrillic]{DejaVu Sans}
+\newfontfamily\bio[Ligatures=TeX,Script=Cyrillic]{DejaVu Serif}
+\newfontfamily\serif[Ligatures=TeX,Script=Cyrillic]{DejaVu Serif}
+\newfontfamily\sans[Ligatures=TeX,Script=Cyrillic]{DejaVu Sans}
+\newfontfamily\cyrillicfont[Ligatures=TeX,Script=Cyrillic]{DejaVu Serif}
+\renewcommand*{\namefont}{\sans\fontsize{24}{28}\mdseries\upshape}
+\renewcommand*{\titlefont}{\serif\LARGE\mdseries\slshape}
+\renewcommand*{\addressfont}{\bio\small\mdseries\slshape}
+\renewcommand*{\quotefont}{\serif\large\slshape}
+\renewcommand*{\sectionfont}{\sans\Large\mdseries\upshape}
+\renewcommand*{\subsectionfont}{\sans\large\mdseries\upshape}
+\renewcommand*{\hintfont}{}
+\moderncvstyle{classic}
+\moderncvcolor{grey}
 
 \setmainlanguage{russian}
 \setotherlanguage{english}
 
-\input{contact-ru}
+\name{Демин Тимур Андреевич}{}
+\phone{+7 (771) 317-26-67}
+\address{}{Астана}{Казахстан}
+\email{me@tdem.in}
+\homepage{tdem.in}
+\social[github]{tdemin}
+\social[linkedin]{tdemin}
+\photo[96pt][0.4pt]{picture}
+
 \date{\today}
 \title{DevOps Engineer}
 \hypersetup{
@@ -17,10 +44,90 @@
 \makecvtitle
 \vspace*{-5mm}
 
-\input{skills-ru}
-\input{education-ru}
-\input{languages-ru}
-\input{experience-ru}
-\input{misc-ru}
+\section{Навыки}
+\cvitem{\bfseries Общее}{Linux (Ubuntu, Debian, Red Hat), Git, сети}
+\cvitem{\bfseries Оркестрация}{Kubernetes (bare metal, k3s, RKE2, vanilla Kubernetes), docker-compose}
+\cvitem{\bfseries Контейнеры}{Docker, Buildkit, rootless podman / buildah}
+\cvitem{\bfseries CI}{GitLab CI, Jenkins, GitHub Actions, Drone CI (1.x), TeamCity}
+\cvitem{\bfseries CD}{Argo CD, Flux CD (2.x)}
+\cvitem{\bfseries IaC}{Ansible, kustomize, Terraform, helmfile}
+\cvitem{\bfseries Логгирование}{Loki, fluent-bit, Logstash}
+\cvitem{\bfseries Мониторинг}{Prometheus, Grafana, Alertmanager}
+\cvitem{\bfseries СУБД}{PostgreSQL / Patroni, Redis, Elasticsearch}
+\cvitem{\bfseries Разработка}{Go (Echo, Gorilla), Python, bash, JavaScript}
+\cvitem{\bfseries Разное}{restic, MinIO, Sonatype Nexus, Harbor, Keycloak}
+
+\section{Образование}
+\cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
+
+\section{Языки}
+\cvitem{\bfseries Русский}{родной}
+\cvitem{\bfseries Английский}{свободное владение}
+
+\section{Опыт работы}
+\cventry{\textbf{сен. 2023 --- по н.в.}}{DevOps Engineer}{АО "Центр электронных финансов"}{}{}{
+    Ключевые технологии: Kubernetes, Go, Argo CD, GitLab CI, Flux CD
+}
+\cventry{\textbf{дек. 2021 --- июнь 2023}}{DevOps / Platform Engineer}{ООО "РН-БашНИПИнефть"}{}{}{
+    \begin{itemize}
+    \item
+        Сопровождение инфраструктуры в Docker и Kubernetes, документации к ней как Ansible /
+        helmfile-кода там, где это возможно. Ведение локальной библиотеки Ansible-ролей и модулей
+        для административных задач.
+    \item
+        Сопровождение внутренних разрабатываемых систем, их развертывание в тестовые и
+        продуктивные контуры. Поддержка пайплайнов CI/CD для них на Jenkins.
+    \item
+        Поддержка внутренней площадки разработки (IDP), изначально основанной на GitLab CE,
+        позднее переведенной на Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube.
+        Поддержка специфичных для IDP компонент: общих библиотек для Jenkins, образов агентов
+        Jenkins, библиотеки локальных Docker-образов с преднастроенными внутренними
+        репозиториями и удостоверяющими центрами, и т.д. Сопровождение инстанса TeamCity для
+        специфичных сборок.
+    \item
+        Разработка IDP-специфичных утилит сопровождения и автоматизации релизов:
+        \begin{itemize}
+            \item
+                Генератор релизов и списков изменений к ним для Gitea (на Go)
+            \item
+                Движок групповых политик для Gitea (реализующий настройки по умолчанию
+                для новых репозиториев внутри организации, автоматическое создание нужных
+                веток, включение защиты веток, и т.д.) (на Go)
+            \item
+                Утилита массового выполнения операций с репозиториями Gitea (автонастройка
+                репозиториев, миграция пользователей и репозиториев с других сервисов, и т.д.)
+                (на Python)
+        \end{itemize}
+    \item
+        Поддержка внутренних для IDP (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
+        / Grafana) и специфичных для проектов (Logstash / Elasticsearch / Prometheus / Grafana)
+        сервисов мониторинга и логгирования. Сопровождение специфичного для команд мониторинга
+        (Oracle XE).
+    \item
+        Сопровождение корпоративного инстанса YouTrack. Разработка рабочих процессов на
+        JavaScript для команд, использующих YouTrack для техподдержки (автоопределение организации
+        для входящих тикетов из почты, автоназначение команд на задачи, и т.п.)
+    \item
+        Совмещение ролей DevOps и backend-разработчика на одном из проектов: разработка
+        RESTful-сервисов для cron-вебхуков и сборки образов контейнеров на Go / Labstack Echo
+        / PostgreSQL / buildah.
+    \item
+        Техническая поддержка разработчиков в случае необходимости.
+    \end{itemize}
+}
+\cventry{\textbf{июнь 2020 --- июль 2020}}{Практикант}{АО "Нефтеавтоматика"}{}{}{
+    \begin{itemize}
+    \item
+        Разработка внутреннего ПО учета микроконтроллеров на Go / Gorilla / Pongo2 /
+        PostgreSQL. Тестирование и отладка на Debian 9.
+    \end{itemize}
+}
+
+\section{О себе}
+Поддерживаю движение свободного программного обеспечения. Бывший корректор новостей на
+портале Linux.org.ru. Сопровождающий пакетов в Arch Linux User Repository и nixpkgs.
+Активно веду проекты на GitHub, интересуюсь backend и web-разработкой в целом. Особо
+интересуюсь практической информационной безопасностью, а также изоляцией, контейнеризацией
+и защитой приложений на уровне сети и операционных систем.
 
 \end{document}
