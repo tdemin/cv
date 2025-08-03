@@ -46,13 +46,12 @@
 \cvitem{\bfseries General}{Linux (Ubuntu, Debian, Red Hat), Git, networking}
 \cvitem{\bfseries Orchestration}{Kubernetes (bare metal, k3s, RKE2, vanilla Kubernetes), docker-compose}
 \cvitem{\bfseries Containers}{Docker, Buildkit, rootless podman / buildah}
-\cvitem{\bfseries CI}{GitLab CI, Jenkins, GitHub Actions, Drone CI (1.x), TeamCity}
-\cvitem{\bfseries CD}{Argo CD, Flux CD (2.x)}
+\cvitem{\bfseries CI/CD}{GitLab CI, Jenkins, GitHub Actions, Argo CD, Flux CD (2.x)}
 \cvitem{\bfseries IaC}{Ansible, kustomize, Terraform, helmfile}
 \cvitem{\bfseries Logging}{Loki, fluent-bit, Logstash}
 \cvitem{\bfseries Monitoring}{Prometheus, Grafana, Alertmanager}
 \cvitem{\bfseries Databases}{PostgreSQL / Patroni, Redis, Elasticsearch}
-\cvitem{\bfseries Development}{Go (Echo, Gorilla), Python, bash, JavaScript}
+\cvitem{\bfseries Development}{Go (Echo, Gorilla), Python, bash}
 \cvitem{\bfseries Misc}{restic, MinIO, Sonatype Nexus, Harbor, Keycloak}
 
 \section{Education}
@@ -78,32 +77,15 @@ Computer Science}{}{}
         Maintained internally developed systems, their deployment to test and production
         contours. Built CI/CD pipelines for them in Jenkins.
     \item
-        Worked on an internal development platform (IDP) initially based on GitLab CE,
-        superseded with Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube. Maintained
-        IDP-specific innerworkings: shared Jenkins libraries, Jenkins agent images, local base
-        Docker image library with repository / certificates presets, etc. Maintained an older
-        TeamCity instance.
+        Worked on an internal development platform (IDP) based on Gitea / Jenkins / Nexus /
+        Harbor. Maintained IDP-specific innerworkings. Developed IDP-specific release engineering
+        and automation software.
     \item
-        Developed IDP-specific release engineering and automation software:
-        \begin{itemize}
-            \item
-                Gitea release uploader and changelog generator, written in Go
-            \item
-                Gitea group policy editor (allowing default repository settings, automatic
-                branch creation, enabling branch protection, etc), written in Go
-            \item
-                Gitea repository batch processing utility (repository settings, user /
-                repository migration between instances, etc), written in Python
-        \end{itemize}
-    \item
-        Managed both IDP-internal (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
-        / Grafana) and project-specific (Logstash, Elasticsearch / Prometheus / Grafana)
-        monitoring and logging services. Maintained team-specific monitoring for Oracle XE
-        and PostgreSQL.
+        Managed both IDP-internal and project-specific monitoring and logging services.
+        Maintained team-specific monitoring for Oracle XE and PostgreSQL.
     \item
         Administered corporate YouTrack instance, developed JavaScript workflows for teams using
-        YouTrack for tech support (e.g. automatic company detection for incoming tickets,
-        assigning teams by task state, etc).
+        YouTrack for tech support.
     \item
         Combined DevOps and backend developer roles on one of the projects: worked on
         services providing cron webhooks and container image building capabilities in Go /

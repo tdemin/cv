@@ -48,13 +48,12 @@
 \cvitem{\bfseries Общее}{Linux (Ubuntu, Debian, Red Hat), Git, сети}
 \cvitem{\bfseries Оркестрация}{Kubernetes (bare metal, k3s, RKE2, vanilla Kubernetes), docker-compose}
 \cvitem{\bfseries Контейнеры}{Docker, Buildkit, rootless podman / buildah}
-\cvitem{\bfseries CI}{GitLab CI, Jenkins, GitHub Actions, Drone CI (1.x), TeamCity}
-\cvitem{\bfseries CD}{Argo CD, Flux CD (2.x)}
+\cvitem{\bfseries CI/CD}{GitLab CI, Jenkins, GitHub Actions, Argo CD, Flux CD (2.x)}
 \cvitem{\bfseries IaC}{Ansible, kustomize, Terraform, helmfile}
 \cvitem{\bfseries Логгирование}{Loki, fluent-bit, Logstash}
 \cvitem{\bfseries Мониторинг}{Prometheus, Grafana, Alertmanager}
 \cvitem{\bfseries СУБД}{PostgreSQL / Patroni, Redis, Elasticsearch}
-\cvitem{\bfseries Разработка}{Go (Echo, Gorilla), Python, bash, JavaScript}
+\cvitem{\bfseries Разработка}{Go (Echo, Gorilla), Python, bash}
 \cvitem{\bfseries Разное}{restic, MinIO, Sonatype Nexus, Harbor, Keycloak}
 
 \section{Образование}
@@ -79,35 +78,15 @@
         Сопровождение внутренних разрабатываемых систем, их развертывание в тестовые и
         продуктивные контуры. Поддержка пайплайнов CI/CD для них на Jenkins.
     \item
-        Поддержка внутренней площадки разработки (IDP), изначально основанной на GitLab CE,
-        позднее переведенной на Keycloak / Gitea / Jenkins / Nexus / Harbor / SonarQube.
-        Поддержка специфичных для IDP компонент: общих библиотек для Jenkins, образов агентов
-        Jenkins, библиотеки локальных Docker-образов с преднастроенными внутренними
-        репозиториями и удостоверяющими центрами, и т.д. Сопровождение инстанса TeamCity для
-        специфичных сборок.
+        Поддержка внутренней площадки разработки (IDP), изначально основанной на Gitea / Jenkins /
+        Nexus / Harbor. Поддержка специфичных для IDP компонент, утилит сопровождения и
+        автоматизации релизов.
     \item
-        Разработка IDP-специфичных утилит сопровождения и автоматизации релизов:
-        \begin{itemize}
-            \item
-                Генератор релизов и списков изменений к ним для Gitea (на Go)
-            \item
-                Движок групповых политик для Gitea (реализующий настройки по умолчанию
-                для новых репозиториев внутри организации, автоматическое создание нужных
-                веток, включение защиты веток, и т.д.) (на Go)
-            \item
-                Утилита массового выполнения операций с репозиториями Gitea (автонастройка
-                репозиториев, миграция пользователей и репозиториев с других сервисов, и т.д.)
-                (на Python)
-        \end{itemize}
-    \item
-        Поддержка внутренних для IDP (fluent-bit / Loki / Prometheus / Thanos / Alertmanager
-        / Grafana) и специфичных для проектов (Logstash / Elasticsearch / Prometheus / Grafana)
-        сервисов мониторинга и логгирования. Сопровождение специфичного для команд мониторинга
-        (Oracle XE).
+        Поддержка внутренних для IDP и специфичных для проектов сервисов мониторинга и логгирования.
+        Сопровождение специфичного для команд мониторинга (Oracle XE, PostgreSQL).
     \item
         Сопровождение корпоративного инстанса YouTrack. Разработка рабочих процессов на
-        JavaScript для команд, использующих YouTrack для техподдержки (автоопределение организации
-        для входящих тикетов из почты, автоназначение команд на задачи, и т.п.)
+        JavaScript для команд, использующих YouTrack для техподдержки.
     \item
         Совмещение ролей DevOps и backend-разработчика на одном из проектов: разработка
         RESTful-сервисов для cron-вебхуков и сборки образов контейнеров на Go / Labstack Echo
