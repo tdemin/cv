@@ -48,13 +48,14 @@
 \cvitem{\bfseries Общее}{Linux (Ubuntu, Debian, Red Hat), Git, сети}
 \cvitem{\bfseries Оркестрация}{Kubernetes (bare metal, k3s, RKE2, vanilla Kubernetes), docker-compose}
 \cvitem{\bfseries Контейнеры}{Docker, Buildkit, rootless podman / buildah}
-\cvitem{\bfseries CI/CD}{GitLab CI, Jenkins, GitHub Actions, Argo CD, Flux CD (2.x)}
-\cvitem{\bfseries IaC}{Ansible, kustomize, Terraform, helmfile}
-\cvitem{\bfseries Логгирование}{Loki, fluent-bit, Logstash}
-\cvitem{\bfseries Мониторинг}{Prometheus, Grafana, Alertmanager}
+\cvitem{\bfseries CI/CD}{GitLab CI, Jenkins, Argo CD, Flux CD (2.x)}
+\cvitem{\bfseries IaC}{Ansible, kustomize, Helm, Terraform}
+\cvitem{\bfseries Логгирование}{Loki, fluent-bit, fluentd, Logstash}
+\cvitem{\bfseries Мониторинг}{Prometheus, Grafana, Alertmanager, Zabbix}
 \cvitem{\bfseries СУБД}{PostgreSQL / Patroni, Redis, Elasticsearch}
 \cvitem{\bfseries Разработка}{Go (Echo, Gorilla), Python, bash}
-\cvitem{\bfseries Разное}{restic, MinIO, Sonatype Nexus, Harbor, Keycloak}
+\cvitem{\bfseries Облака}{Google Cloud Platform, Azure}
+\cvitem{\bfseries Разное}{restic, Sonatype Nexus, Harbor, Keycloak}
 
 \section{Образование}
 \cventry{\textbf{2017 --- 2021}}{УГНТУ}{}{Бакалавриат, информатика и вычислительная техника}{}{}
@@ -64,7 +65,7 @@
 \cvitem{\bfseries Английский}{свободное владение}
 
 \section{Опыт работы}
-\cventry{\textbf{май 2025 --- по н.в.}}{DevOps Engineer}{Aventus IT}{}{}{}
+\cventry{\textbf{май 2025 --- по н.в.}}{DevOps Engineer}{Aventus IT (ТОО "АЙТИ КАСТЕРС")}{}{}{}
 \cventry{\textbf{сен. 2023 --- май 2025}}{DevOps / Service Reliability Engineer}{АО "Центр электронных финансов"}{}{}{
     Ключевые технологии: Kubernetes, Go, Argo CD, GitLab CI, Flux CD
 }
@@ -76,23 +77,17 @@
         для административных задач.
     \item
         Сопровождение внутренних разрабатываемых систем, их развертывание в тестовые и
-        продуктивные контуры. Поддержка пайплайнов CI/CD для них на Jenkins.
+        продуктивные контуры. Поддержка пайплайнов CI/CD для них на Jenkins. Поддержка
+        внутренней площадки разработки (IDP) на базе Gitea / Jenkins / Nexus / Harbor,
+        её специфичных компонент, утилит сопровождения и автоматизации релизов.
     \item
-        Поддержка внутренней площадки разработки (IDP), изначально основанной на Gitea / Jenkins /
-        Nexus / Harbor. Поддержка специфичных для IDP компонент, утилит сопровождения и
-        автоматизации релизов.
+        Поддержка сервисов мониторинга и логгирования как для IDP, так и для проектов.
+        Сопровождение мониторинга Oracle XE и PostgreSQL, корпоративного инстанса YouTrack
+        и разработка JavaScript-процессов для команд техподдержки.
     \item
-        Поддержка внутренних для IDP и специфичных для проектов сервисов мониторинга и логгирования.
-        Сопровождение специфичного для команд мониторинга (Oracle XE, PostgreSQL).
-    \item
-        Сопровождение корпоративного инстанса YouTrack. Разработка рабочих процессов на
-        JavaScript для команд, использующих YouTrack для техподдержки.
-    \item
-        Совмещение ролей DevOps и backend-разработчика на одном из проектов: разработка
-        RESTful-сервисов для cron-вебхуков и сборки образов контейнеров на Go / Labstack Echo
-        / PostgreSQL / buildah.
-    \item
-        Техническая поддержка разработчиков в случае необходимости.
+        Совмещение ролей DevOps и backend-разработчика: разработка сервисов на Go / Labstack
+        Echo / PostgreSQL для cron-вебхуков и сборки образов контейнеров.
+        Техническая поддержка разработчиков.
     \end{itemize}
 }
 \cventry{\textbf{июнь 2020 --- июль 2020}}{Практикант}{АО "Нефтеавтоматика"}{}{}{
@@ -106,7 +101,7 @@
 \section{О себе}
 Поддерживаю движение свободного программного обеспечения. Бывший корректор новостей на
 портале Linux.org.ru. Сопровождающий пакетов в Arch Linux User Repository и nixpkgs.
-Активно веду проекты на GitHub, интересуюсь backend и web-разработкой в целом. Особо
+Веду проекты на GitHub, интересуюсь backend и web-разработкой в целом. Особо
 интересуюсь практической информационной безопасностью, а также изоляцией, контейнеризацией
 и защитой приложений на уровне сети и операционных систем.
 
